@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP3 Player(Nhựt & Vi)</title>
+    <link href="image/nhạc.jpeg" rel="shortcut icon"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    />
+    <script
+        type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+        nomodule
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <link href="app.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <header>
+        <div class="flex h-space content container">
+            <ul class="menu flex ">
+                <li><a href="#">Bài Hát</a></li>
+                <li><a href="#">Playlist</a></li>
+                <li><a href="#">Tuyển Tập</a></li>
+                <li><a href="#">Video</a></li>
+                <li><a href="#">BXH</a></li>
+                <li><a href="#">Chủ Đề</a></li>
+                <li><a href="#">Top 100</a></li>
+                <li><a href="#"><ion-icon name="ellipsis-horizontal"></ion-icon></a></li>
+            </ul>
+            
+            <div class="menu flex ">
+                <input type="text" name="" id="" placeholder="Tìm kiếm ..." class="search"/>
+                <a href="#"><ion-icon name="search-outline" class="search-outline"></ion-icon></a>
+                <a href="#"><ion-icon name="home" class="home"></ion-icon></a>
+                <a href="#"><ion-icon name="cloud-upload" class="cloud-upload"></ion-icon></a>
+            </div>
+            <div  class="container">
+                <ul class="menu flex">
+                    <li><a href="#">Đăng Nhập</a></li>
+                    <li><a href="#">Đăng Ký</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="music">
+            <!--Thanh tuỳ chỉnh trên-->
+            <div class="top-bar flex h-space">
+                <div><ion-icon name="chevron-down-outline" class="arrow"></ion-icon></div>
+                <div><span>Now Playing</span></div>
+                <div><ion-icon name="ellipsis-horizontal-sharp" class="more"></ion-icon></div>      
+            </div>
+            <!--hình, đĩa CD-->
+            <div class="music-thumb">
+                <img src="image/phong.jpeg" alt="Chau Khai Phong"/>
+            </div>
+            <!--Nhạc-->
+            <h3 class="music-name">Chuỗi Ngày Vắng Em</h3>
+            <p class="artist">Châu Khải Phong</p>
+            <!--Thanh thời gian-->
+            <input type="range" name="range" id="range" class="range"/>
+            <audio src="./audio/KhongTronVenNua-ChauKhaiPhongACV-7197914.mp3" id="song"></audio>
+            <!--Thời gian bài hát-->
+            <div class="timer">
+                <div class="duration">2:10</div>
+                <div class="remaining">-3:10</div>
+            </div>
+            <!-- nút điều khiển, chức năng -->
+            <div class="controls">
+                <ion-icon name="repeat" class="play-repeat" alt="repeat"></ion-icon>
+                <ion-icon name="play-back" class="play-back" alt="back"></ion-icon>
+                <div class="play">
+                    <div class="player-inner">
+                    <ion-icon name="play" class="play-icon" alt="play"></ion-icon>
+                    </div>
+                </div>
+                <ion-icon name="play-forward" class="play-forward" alt="forward"></ion-icon>
+                <ion-icon name="list-sharp" class="list-sharp"></ion-icon>
+            </div>
+            <!--Danh sách nhạc-->
+            <!--<div class="music-list">
+                <div class="haeder">
+                    <div class="row ">
+                        <ion-icon name="musical-notes-sharp"></ion-icon>
+                        <span>Music list</span>
+                    </div>
+                    <ion-icon name="close" class="close"></ion-icon>
+                </div>
+                <ul>
+                    
+                </ul>
+            </div>-->
+            
+        </div>
+    </nav>      
+    <footer> <span> LÊ MINH NHỰT & NGUYỄN HUỲNH TƯỜNG VI &copy; 2022</span> </footer>
+    <script src="js/music-list.js"></script>
+    <script src="js/app.js"></script>
+    
+</body>
+</html>

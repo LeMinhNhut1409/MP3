@@ -1,0 +1,323 @@
+select,
+button{
+    outline: none;
+}
+input{
+    line-height: normal;
+}
+label,
+button{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+* {
+    margin: 1px;
+    padding: 1px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  
+}
+:root{
+    --pink: #ff74a4;
+    --violet: #9f6ea3;
+    --lightblack: #515C6F;
+    --white: #ffffff;
+    --darkwhite: #cecaca;
+    --pinkshadow: #ffcbdd;
+    --lightbshadow: rgba(0,0,0,0.15);
+}
+body{
+    background-repeat: no-repeat;
+    
+    background: rgba(239, 170, 73, 0.83);
+    
+}
+.flex{
+    display: flex;
+}
+.h-space {
+    justify-content: space-between;
+}
+header{
+  padding-bottom: 5px;
+}
+.home,
+.cloud-upload,
+.search-outline{
+  width:1.5rem;
+  margin-top: 1rem;
+  padding-bottom: .3rem;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+.search{
+  font-size: 1.1rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.menu {
+  text-decoration: none;
+  list-style-type: none;
+  margin: .5rem;
+  font-size: 1rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+ul.menu li{
+margin: 1rem;
+}
+ul.menu >li > a:hover{
+  background-color: blue;
+  color:white;
+}
+.content{
+    border-bottom: #dadada solid 1px;
+    padding: 5px 3px 5px 2px;
+    position: fixed;
+    position: relative;
+    width: 100%;
+    z-index: 999999;
+    min-width: 998px;
+
+}
+.container > li > a{
+  border: 1px dashed darkblue;
+  margin:2px;
+  padding: 1rem 1rem;
+}
+nav{
+  align-items: center;
+  padding: 5rem;
+}
+.music{
+    max-width: 500px;
+    max-height: 1000px;
+    margin: 0 auto;
+    border-radius: 12px;
+    background-color: var(--white);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 25px 30px;
+    position:relative;
+    overflow: hidden;
+}
+.top-bar{
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.top-bar span{
+    font-size: 18px;
+    color: lightslategray;
+}
+.music-thumb{
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    margin: 0 auto 25px;
+    
+    
+}
+.music-thumb.is-playing{
+    animation: xoaytron 5s infinite linear;
+}
+.music-thumb img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px var(--violet), 0 0 0 6px var(--pink), 0 0 0 9px var(--pinkshadow);
+    
+}
+.music-name{
+    font-size: 18px;
+    font-weight: 500px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.artist{
+    text-align: center;
+    font-size: 1rem;
+    margin-top: -1rem;
+    color: lightslategrey;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.timer{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 40px;
+}
+.controls{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:0 40px;
+}
+.play{
+    position: relative;
+}
+.play::before{
+    content: " ";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to right bottom, #ff6bcb,#ffb86c);
+    transform: scale(1.5);
+    border-radius: 100rem;
+}
+.player-inner{
+    width: 40px;
+    height: 40px;
+    border-radius: 100rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: rgba(149, 157, 165, 0.2) 8px 8px 24px;
+    font-size: 20px;
+    position: relative;
+    z-index: 2;
+}
+.arrow,
+.more,
+.play-repeat,
+.play-back,
+.list-sharp,
+.play-forward{
+    cursor: pointer;
+}
+.range{
+    -webkit-appearance: none; 
+    width: 100%;
+    background: transparent; 
+    margin-bottom: 30px;
+
+} /*dùng Styling Cross-Browser Compatible Range Inputs with CSS */
+.range::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background: #eeee;
+    border-radius: 1.3px;
+}
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 100rem;
+    background: linear-gradient(to right bottom, #ff6bcb,#ffb86c);
+    box-shadow: 0 0 0 3px white,0 0 0 6px rgba(61, 115, 169, 0.05);
+    margin-top: -5.5px;
+}
+footer {
+    background-color: lightblue;
+    color: red;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: fixed;
+    left:0;
+    right:0;
+    bottom: 0;
+    text-align: center;
+    
+}
+@keyframes xoaytron {
+    to{
+        transform: rotate(360deg);
+    }
+}
+.play-repeat,
+.arrow,
+.more,
+.list-sharp{
+    font-size: 25px;
+}
+.music-list,
+.header,
+.music-list li
+{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.music-list{
+    position: absolute;
+    background: var(--white);
+    width: 100%;
+    left: 0;
+    bottom: -55%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 5;
+    padding: 15px 30px;
+    border-radius: 15px;
+    box-shadow: 0px -5px 10px rgba(0,0,0,0.1);
+    transition: all 0.15s ease-out;
+    
+}
+.music-list.show{
+    bottom: 0;
+    opacity: 1;
+    pointer-events: auto;
+}
+.header .row{
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+    color: var(--lightblack);
+}
+.header .row ion-icon{
+    cursor: default;
+}
+.header .row span{
+    margin-left: 5px;
+}
+.header #close{
+    font-size: 22px;
+    color: var(--lightblack);
+}
+.music-list ul{
+    margin: 10px 0;
+    max-height: 260px;
+    overflow: auto;
+}
+.music-list ul::-webkit-scrollbar{
+    width: 0px;
+}
+.music-list ul li{
+    list-style: none;
+    display: flex;
+    cursor: pointer;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    color: var(--lightblack);
+    border-bottom: 1px solid #E5E5E5;
+  }
+  .music-list ul li:last-child{
+    border-bottom: 0px;
+  }
+  .music-list ul li .row span{
+    font-size: 17px;
+  }
+  .music-list ul li .row p{
+    opacity: 0.9;
+  }
+  ul li .duration{
+    font-size: 16px;
+  }
+  ul li.playing{
+    pointer-events: none;
+    color: var(--violet);
+  }
+  body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, th, td {
+    margin: 0;
+    padding: 0;
+  }
+  
